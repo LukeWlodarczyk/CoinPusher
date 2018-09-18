@@ -87,13 +87,11 @@ class Today extends Component {
   }
 
   render() {
-    // Let's extract everything uptop to keep our render method cleaner ;)
     const { ethprice, btcprice, ltcprice } = this.state;
     return (
       <div className="today--section container">
         <h2>Current Price</h2>
         <div className="columns today--section__box">
-          {/** Creating components for things that repeat themselves is also pretty good**/}
           <CryptoPrice currency="btc" price={btcprice} />
           <CryptoPrice currency="eth" price={ethprice} />
           <CryptoPrice currency="ltc" price={ltcprice} />

@@ -13,8 +13,13 @@ class History extends Component {
     fourdaysprice: {}
   };
 
+  saveStateToLocalStorage = () => {
+    localStorage.setItem("history-state", JSON.stringify(this.state));
+  };
+
   restoreStateFromLocalStorage = () => {
     const state = JSON.parse(localStorage.getItem("today-state"));
+    console.log(state);
     this.setState(state);
   };
 
@@ -44,7 +49,7 @@ class History extends Component {
             ltc: ltc.data.LTC.USD
           };
 
-          this.setState({ [stateProp]: data });
+          this.setState({ [stateProp]: data }, this.saveStateToLocalStorage);
         })
       );
   };

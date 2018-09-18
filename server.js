@@ -4,9 +4,9 @@ const Pusher = require("pusher");
 const app = express();
 
 const pusher = new Pusher({
-  appId: "602703",
-  key: "e713bea0c6accd823693",
-  secret: "ea61701d96f7de2864dc",
+  appId: "602723",
+  key: "ed1e9ea5a087b9be2988",
+  secret: "85ced5c8831920b60315",
   cluster: "eu",
   encrypted: true
 });
@@ -22,6 +22,7 @@ app.post("/prices/new", (req, res) => {
   pusher.trigger("coin-prices", "prices", {
     prices: req.body.prices
   });
+
   res.sendStatus(200);
 });
 

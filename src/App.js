@@ -1,21 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./index.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+import Today from "./components/Today";
+import History from "./components/History";
+import Header from "./components/Header";
+
+const App = () => (
+  <div className="">
+    <div className="topheader">
+      <Header />
+    </div>
+    <section className="results--section">
+      <div className="container">
+        <h1>
+          PusherCoins is a realtime price information about<br /> BTC, ETH and
+          LTC.
+        </h1>
       </div>
-    );
-  }
-}
+      <div className="results--section__inner">
+        <Today />
+        <History />
+      </div>
+    </section>
+  </div>
+);
 
 export default App;

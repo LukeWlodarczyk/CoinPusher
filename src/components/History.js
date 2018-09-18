@@ -18,8 +18,7 @@ class History extends Component {
   };
 
   restoreStateFromLocalStorage = () => {
-    const state = JSON.parse(localStorage.getItem("today-state"));
-    console.log(state);
+    const state = JSON.parse(localStorage.getItem("history-state"));
     this.setState(state);
   };
 

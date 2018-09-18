@@ -16,7 +16,6 @@
     "start:client": "react-scripts start",
     "start:server": "nodemon server.js",
     "start": "npm-run-all --parallel start:*",
-    "offline": "npm run build && serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
